@@ -19,14 +19,4 @@ data = pigeon_data = {
 }
 
 
-  pigeon_data.each do |k0,v0|
-   pigeon_data[k0].each do |k1,v1|
-     pigeon_data[k0][k1].each.with_index do |name,idx|
-       # p "[#{k0}][#{k1}] = #{pigeon_data[k0][k1][idx]}"
-       hash[name][k0] <<  "#{k1}"
-       # p "#{k0} - #{k1}"
-     end
-   end
-  end
-  hash
-end
+ 
