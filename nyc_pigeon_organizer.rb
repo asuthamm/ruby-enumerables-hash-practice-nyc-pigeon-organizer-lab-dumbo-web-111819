@@ -19,6 +19,23 @@ data = pigeon_data = {
 }
 
 
- def nyc_pigeon_organizer(data)
-  # write your code here!
+def nyc_pigeon_organizer(data)
+  hash = {}
+  pigeon_data.each do |k,v|
+  
+    v.each do |key,names|      # color, gender, lives
+  
+      names.each.with_index do |name,idx|
+        if !hash.has_key?(name)
+          hash[name] = {}
+        end
+        if !hash[name].has_key?(k)
+          hash[name][k] = []
+        end 
+        hash[name][k] <<  key.to_s     
+      end
+   end
+end
+
+
 end
