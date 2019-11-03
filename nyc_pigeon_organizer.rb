@@ -21,18 +21,18 @@ data = pigeon_data = {
 
 def nyc_pigeon_organizer(data)
   hash = {}
-  data.each do |k,v|
+  data.each do |key,value|
   
-    v.each do |key,names|      # color, gender, lives
+    value.each do |new_value,names|      # color, gender, lives
   
-      names.each.with_index do |name,idx|
+      names.each do |name|
         if !hash.has_key?(name)
           hash[name] = {}
         end
-        if !hash[name].has_key?(k)
-          hash[name][k] = []
+        if !hash[name].has_key?(key)
+          hash[name][key] = []
         end 
-        hash[name][k] <<  key.to_s     
+        hash[name][key] <<  new_value.to_s     
       end
     end
   end
