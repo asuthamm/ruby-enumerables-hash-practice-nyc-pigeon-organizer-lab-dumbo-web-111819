@@ -21,7 +21,7 @@ data = pigeon_data = {
 
 def nyc_pigeon_organizer(data)
   hash = {}
-  pigeon_data.each do |k,v|
+  data.each do |k,v|
   
     v.each do |key,names|      # color, gender, lives
   
@@ -38,4 +38,3 @@ def nyc_pigeon_organizer(data)
   end
   hash
 end
-
